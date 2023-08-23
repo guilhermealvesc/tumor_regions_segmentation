@@ -77,8 +77,8 @@ def train_model_with_validation(dataloaders,
 
                 logger.info("\tfname: '{}' {}".format(fname[0], (batch_idx + 1)))
 
-                data = Variable(data.to(device))
-                target = Variable(target.to(device)).unsqueeze(1)
+                data = Variable(data.to(device)) # DEPRECATED
+                target = Variable(target.to(device)).unsqueeze(1) # DEPRECATED
                 # target = Variable(target.to(device))
                 # print('X     --> {}'.format(data.size()))
                 # print('y     --> {}'.format(target.size()))
